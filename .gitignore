@@ -1,4 +1,7 @@
 
+# Jeckyll
+_site/
+
 # Eclipse
 .classpath
 .project
