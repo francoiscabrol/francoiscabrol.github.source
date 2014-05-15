@@ -1,0 +1,9 @@
+name: Coffee, Java & Music
+accroche: Computer music, Human-machine interface, Information visualization, Java/Scala programming
+mail: francois.cabrol@live.ca
+markdown: kramdown
+safe: true
+lsi: false 
+pygments: true
+permalink: none
+exclude: [README.md, Rakefile]

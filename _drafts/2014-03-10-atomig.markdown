@@ -1,0 +1,13 @@
+---
+layout: project
+title:  aToMiG
+subtitle: Touchless Melody Generator
+description: A touchless and real time melody generation system
+repository: https://github.com/francoiscabrol/aToMiG
+tags: open
+--- 
+
+A leap motion based touchless system that allow to control generation parameters in real time
+
+**Written in Scala**
+
