@@ -14,10 +14,8 @@ You can try it! No inspiration is required ;)
 And luckily there is a [web page]({{page.website}}) that explains all about it!
 
 -----------------------
-<div style="margin-left:auto; margin-right: auto; width:80%">
-  <iframe src="http://player.vimeo.com/video/68455966" width="100%" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-  <p><a href="http://vimeo.com/68455966">GenSession: a Flexible Zoomable Interface for Melody Generation</a> from <a href="http://vimeo.com/user18975043">Fran&ccedil;ois Cabrol</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-</div>
+
+{% vimeo 68455966 %}
 
 ----------------
 
