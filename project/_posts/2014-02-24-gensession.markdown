@@ -31,5 +31,15 @@ And here an example contruct from melody generated with GenSession:
     <p>The GenSession interface</p>
 </div>
 
+<a class="lightbox" href="#" lightbox="myfirstone"> my first lightbox </a>
+<div class="lightbox" lightbox="myfirstone">
+		<div class="background"></div>
+		<div class="content">
+			<img src="{{ site.url }}/assets/images/gensession_1.png" />
+		</div>
+</div>
+
+{% picture gens gensession_1.png %}
+
 
 
