@@ -1,6 +1,8 @@
 require 'json'
 require 'net/http'
 
+#Example: https://github.com/soupdiver/octopress-soundcloud/blob/master/soundcloud.rb
+
 # Title: SoundCloud plugin for Jekyll
 # Author: Nick Fisher (http://spadgos.github.com)
 # Edited on August, 7th 2012 by Felix Gläske
@@ -71,11 +73,11 @@ module Jekyll
 
     def render(context)
       if @type and @id
-        @height = (450 unless @type == 'tracks') || 166
+        @height = (450 unless @type == 'tracks') || 100
         @resource = (@type unless @type === 'favorites') || 'users'
         @extra = ("" unless @type === 'favorites') || '%2Ffavorites'
         @joined_options = @options.join("&amp;")
-        "<iframe width=\"100%\" height=\"#{@height}\" scrolling=\"no\" frameborder=\"no\" src=\"http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2F#{@resource}%2F#{@id}#{@extra}&amp;#{@joined_options}\"></iframe>"
+        "<iframe width=\"70%\" height=\"#{@height}\" scrolling=\"no\" frameborder=\"no\" src=\"http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2F#{@resource}%2F#{@id}#{@extra}&amp;#{@joined_options}\"></iframe>"
       else
         "Error processing input, expected syntax: {% soundcloud type id [options...] %} received: #{@markup}"
       end

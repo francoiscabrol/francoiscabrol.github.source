@@ -19,6 +19,11 @@ And luckily there is a [web page]({{page.website}}) that explains all about it!
 
 ----------------
 
+And here an example contruct from melody generated with GenSession:
+
+
+{% soundcloud tracks 149600423 %}
+
 <div class="thumbnail with-caption">
     <a data-toggle="lightbox" href="#demoLightbox" class="thumbnail">
         <img class="img-rounded" alt="The GenSession interface" src="{{ site.url }}/assets/images/gensession_1.png" style="width: 300px;">
