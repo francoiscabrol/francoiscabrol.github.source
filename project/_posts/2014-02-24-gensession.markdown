@@ -13,33 +13,24 @@ The system allow the user to generate melodies, organize them, manage generation
 You can try it! No inspiration is required ;)
 And luckily there is a [web page]({{page.website}}) that explains all about it!
 
+The projet was done for my master thesis in the lab of <a href="http://profs.etsmtl.ca/mmcguffin/">Michael McGuffin</a>. The video that follow show how it works.
+
 -----------------------
 
 {% vimeo 68455966 %}
 
 ----------------
 
-And here an example contruct from melody generated with GenSession:
+## Examples of sessions
 
+And here an example contruct from melody generated with GenSession:
 
 {% soundcloud tracks 149600423 %}
 
-<div class="thumbnail with-caption">
-    <a data-toggle="lightbox" href="#demoLightbox" class="thumbnail">
-        <img class="img-rounded" alt="The GenSession interface" src="{{ site.url }}/assets/images/gensession_1.png" style="width: 300px;">
-    </a>
-    <p>The GenSession interface</p>
-</div>
 
-<a class="lightbox" href="#" lightbox="myfirstone"> my first lightbox </a>
-<div class="lightbox" lightbox="myfirstone">
-		<div class="background"></div>
-		<div class="content">
-			<img src="{{ site.url }}/assets/images/gensession_1.png" />
-		</div>
-</div>
+## Screenshots
 
-{% picture gens gensession_1.png %}
+{% picture gensession_1.png %}
 
 
 

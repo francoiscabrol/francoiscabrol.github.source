@@ -80,12 +80,16 @@ div.project p.description {
     color: #999;
 }
 
+img.thumbnail {
+	width: 300px;
+}
+
 /* Lightbox - personal impelementation */
 div.lightbox {
 	position: fixed;
 	display:none;
-	transition: opacity 2s;
-	-webkit-transition: opacity 2s;
+	transition: all 2s;
+	-webkit-transition: all 2s;
 	top:0;
 	left:0;
 	right: 0;
