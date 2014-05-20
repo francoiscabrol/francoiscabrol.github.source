@@ -32,9 +32,6 @@ end
 
 desc "Deploy _site/ to master branch"
 task :deploy do
-  puts "\n## Build the production version"
-  status = system("Jekyll build") 
-  puts status ? "Success" : "Failed"
   puts "\n## Go to the _site folder"
   status = system("cd _site/")  
   puts status ? "Success" : "Failed"
