@@ -2,7 +2,7 @@
 desc "Preview _site/"
 task :preview do
   puts "\n## Opening _site/ in browser"
-  status = system("/Applications/Chromium.app/Contents/MacOS/Chromium http://localhost:4000")
+  status = system("/Applications/Chromium.app/Contents/MacOS/Chromium http://localhost:4000 &")
   puts status ? "Success" : "Failed"
 end
 
