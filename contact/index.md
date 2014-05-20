@@ -2,24 +2,28 @@
 layout: default
 title: Contact
 ---
-    
-##Contact
 
+# Contact
 
-<address>
-  <strong>E-mail</strong><br>
-  <a href="mailto:{{site.mail}}">{{site.mail}}</a>
-</address>
-<address>
-  <strong>GitHub</strong><br>
-  <a href="https://github.com/francoiscabrol">github.com/francoiscabrol</a>
-</address>
+----------------------
 
-<address>
-  <strong>Twitter</strong><br>
-  <a href="https://twitter.com/francoiscabrol">@francoiscabrol</a>
-</address>
+<a href="mailto:{{site.mail}}">{{site.mail}}</a>
 
+----------------------
 
+<a href="https://github.com/francoiscabrol" class="btn btn-md btn-social btn-github">
+  <i class="fa fa-github"></i>
+ 	GitHub
+</a>
+
+<a href="https://twitter.com/francoiscabrol" class="btn btn-md btn-social btn-twitter">
+  <i class="fa fa-twitter"></i>
+ 	Twitter
+</a>
+
+<a href="https://soundcloud.com/francoiscabrol" class="btn btn-md btn-social btn-soundcloud">
+  <i class="fa fa-soundcloud"></i>
+ 	Soundcloud
+</a>
 
 
