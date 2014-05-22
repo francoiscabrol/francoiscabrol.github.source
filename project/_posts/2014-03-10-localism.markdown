@@ -18,4 +18,12 @@ Please visit the [github repository](https://github.com/francoiscabrol/localism)
 
 {% youtube I8H_7YcH2jQ %}
 
+### Screenshot
 
+<div class="container-fluid">
+<div class="row">
+{% picture localism_1.png %}
+{% picture localism_2.png %}
+{% picture localism_3.png %}
+</div>
+</div>

@@ -8,8 +8,8 @@ module Jekyll
         @url  = id
         @id = SecureRandom.urlsafe_base64(5)
         if $3.nil? then
-            @width = 100
-            @height = 100
+            @width = 300
+            @height = 200
             else
             @width = $3.to_i
             @height = $4.to_i
@@ -24,7 +24,7 @@ module Jekyll
 
     def render(context)
         page_url = "#{lookup(context, 'site.url')}/assets/images/#{@url}"
-        %(<div><a class=\"lightbox\" lightbox=\"#{@id}\"><img class="thumbnail img-rounded"  src=\"#{page_url}\" /></a><div class=\"lightbox\" lightbox=\"#{@id}\">
+        %(<div class=\"col-xs-6 col-md-4\" style=\"height:#{@height}px;width:#{@width}px;\"><a class=\"lightbox\" lightbox=\"#{@id}\"><img class="thumbnail img-rounded"  src=\"#{page_url}\" /></a><div class=\"lightbox\" lightbox=\"#{@id}\">
             <div class=\"background\"></div>
             <div class=\"content\"><img src=\"#{page_url}\" /></div>
         </div></div>)
