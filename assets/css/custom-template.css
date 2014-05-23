@@ -80,8 +80,10 @@ div.project p.description {
     color: #999;
 }
 
-img.thumbnail {
-	width: 300px;]
+div.thumbnail {
+	width:  260px;
+	height: 160px;
+	margin: 10px;
 }
 
 /* Lightbox - personal impelementation */
