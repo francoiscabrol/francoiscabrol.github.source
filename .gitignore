@@ -2,6 +2,9 @@
 # Jeckyll
 _site/
 
+# Vim
+*.swp
+
 # Eclipse
 .classpath
 .project

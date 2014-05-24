@@ -15,6 +15,8 @@ And luckily there is a [web page]({{page.website}}) that explains all about it!
 
 The projet was done for my master thesis in the lab of <a href="http://profs.etsmtl.ca/mmcguffin/">Michael McGuffin</a>. The video that follow show how it works.
 
+You can also download my master thesis (written in French) at [http://espace.etsmtl.ca/1278/](http://espace.etsmtl.ca/1278/).
+
 -----------------------
 
 {% vimeo 68455966 %}
