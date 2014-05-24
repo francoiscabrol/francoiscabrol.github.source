@@ -33,7 +33,7 @@ end
 desc "Deploy _site/ to master branch"
 task :deploy do
   puts "\n## Go to the _site folder"
-  status = system("cd _site/")  
+  status = system("cd _site")  
   puts status ? "Success" : "Failed"
   puts "\n## Staging modified files"
   status = system("git add .")
