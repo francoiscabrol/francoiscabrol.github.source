@@ -33,7 +33,7 @@ end
 desc "Deploy _site/ to master branch"
 task :deploy do
   puts "\n## Go to the _site folder"
-  status = system("cd _site/")  
+  status = Dir.chdir("_site")
   puts status ? "Success" : "Failed"
   puts "\n## Staging modified files"
   status = system("git add .")
@@ -44,8 +44,5 @@ task :deploy do
   puts status ? "Success" : "Failed"
   puts "\n## Pushing commits to remote"
   status = system("git push")
-  puts status ? "Success" : "Failed"
-  puts "\n## Come back to the source folder"
-  status = system("cd ..")
   puts status ? "Success" : "Failed"
 end
