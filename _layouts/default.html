@@ -29,7 +29,7 @@
           <ul class="nav navbar-nav">
             <li class="dropdown{% if page.categories contains 'project' %} active {% endif %}">
               <a data-toggle="dropdown" href="#" class="dropdown-toggle">Projects<b class="caret"></b></a>
-              <ul class="dropdown-menu"> 
+              <ul class="dropdown-menu">
                 <!-- <li class="dropdown-header">Music</li> -->
                 {% for post in site.posts %}
                   <li>
@@ -37,15 +37,35 @@
                      <!-- <li class="divider"></li> -->
                   </li>
                 {% endfor %}
-              </ul>          
-            </li> 
+              </ul>
+            </li>
             {% for p in site.pages %}
-              {% unless p.title == "Home" %}
+              {% unless p.title == "Home" or p.title == "Contact" %}
               <li {% if p.url == page.url %}class="active"{% endif %}>
                 <a href="{{ p.url }}">{{ p.title }}</a>
               </li>
               {% endunless %}
             {% endfor %}
+          </ul>
+          <ul class="nav-network">
+            <li>
+              <a class="btn btn-sm btn-social-icon btn-google-plus" href="mailto:{{site.mail}}"><i class="fa fa-envelope"></i></a>
+            </li>
+            <li>
+               <a class="btn btn-sm btn-social-icon btn-twitter" href="https://twitter.com/francoiscabrol">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/francoiscabrol" class="btn btn-sm btn-social-icon btn-github">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://soundcloud.com/francoiscabrol" class="btn btn-sm btn-social-icon btn-soundcloud">
+                <i class="fa fa-soundcloud"></i>
+              </a>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -55,7 +75,7 @@
     </div>
     <div id="footer">
       <div class="container">
-          © Copyright <a href="/contact/">François Cabrol</a> | 
+          © Copyright <a href="/contact/">François Cabrol</a> |
           <a href="https://github.com/francoiscabrol">github.com/francoiscabrol</a> -
           <a href="https://twitter.com/francoiscabrol">twitter.com/francoiscabrol</a><br />
           This web site is powered by <a href="http://jekyllrb.com">Jekyll</a, <a href="http://getbootstrap.com"> Bootstrap </a> and <a href="http://pages.github.com"> GitHub Pages </a>.
