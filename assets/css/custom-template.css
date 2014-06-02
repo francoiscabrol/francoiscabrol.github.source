@@ -28,7 +28,23 @@ ul.nav-network {
 
 .nav-network li {
 	display:inline-block;
+}
 
+.nav-network a {
+	/*transition: 0.75s all;
+	-webkit-transition: 0.75s all;*/
+}
+
+.nav-network .btn-social-icon span {
+	opacity:0;
+	display: none;
+}
+
+.nav-network .btn-social span {
+	display: inherit;
+	opacity:1;
+	/*transition: 0.75s all;
+	-webkit-transition: 0.75s all;*/
 }
 
 @media (max-width: 768px) {
