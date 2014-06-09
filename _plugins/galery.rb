@@ -25,9 +25,14 @@ module Jekyll
     def render(context)
         page_url = "#{lookup(context, 'site.url')}/assets/images/#{@url}"
         %(<div class=\"thumbnail col-xs-6 col-md-4\">
+            <a class=\"lightbox\" lightbox=\"#{@id}\">
             <img class=\"img-rounded\"  src=\"#{page_url}\" />
-        </div>)
+            </a>
+            <div class=\"lightbox\" lightbox=\"#{@id}\">
+            <div class=\"background\"></div>
+            <div class=\"content\"><img src=\"#{page_url}\" /></div>
+        </div></div>)
     end
-    Liquid::Template.register_tag "picture", self
+    Liquid::Template.register_tag "galery", self
   end
 end

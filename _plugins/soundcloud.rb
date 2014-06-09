@@ -77,7 +77,7 @@ module Jekyll
         @resource = (@type unless @type === 'favorites') || 'users'
         @extra = ("" unless @type === 'favorites') || '%2Ffavorites'
         @joined_options = @options.join("&amp;")
-        "<iframe width=\"70%\" height=\"#{@height}\" scrolling=\"no\" frameborder=\"no\" src=\"http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2F#{@resource}%2F#{@id}#{@extra}&amp;#{@joined_options}\"></iframe>"
+        "<iframe class=\"soundcloud-iframe\" width=\"70%\" height=\"#{@height}\" scrolling=\"no\" frameborder=\"no\" src=\"http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2F#{@resource}%2F#{@id}#{@extra}&amp;#{@joined_options}\"></iframe>"
       else
         "Error processing input, expected syntax: {% soundcloud type id [options...] %} received: #{@markup}"
       end
