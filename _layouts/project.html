@@ -17,7 +17,7 @@ layout: default
         {% endif %}
         {% if page.website and page.repository %} | {% endif %}
         {% if page.repository %}
-        <li><a href="{{page.repository}}" class="btn btn-primary btn-sm" role="button">{{page.title}} repository</a></li>
+        <li><a href="{{page.repository}}" class="btn btn-md btn-social btn-github"> <i class="fa fa-github"></i>{{page.title}} on GitHub</a></li>
         {% endif %}
     </ul>
     {% endif %}
