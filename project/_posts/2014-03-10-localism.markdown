@@ -20,6 +20,6 @@ Please visit the [github repository](https://github.com/francoiscabrol/localism)
 
 ### Screenshot
 
-{% picture localism_1.png %}
+{% picture localism_1.png legende %}
 {% picture localism_2.png %}
 {% picture localism_3.png %}
