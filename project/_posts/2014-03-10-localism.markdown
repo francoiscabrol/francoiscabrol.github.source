@@ -20,6 +20,6 @@ Please visit the [github repository](https://github.com/francoiscabrol/localism)
 
 ### Screenshot
 
-{% picture localism_1.png legende %}
-{% picture localism_2.png %}
-{% picture localism_3.png %}
+{% picture localism_3.png, The mouse replacement example of Localism. Calibrate the screen and press mouse on/off. %}
+{% picture localism_2.png, The localism calibration window. The user have to place the finger on the black square and press ALT. %}
+{% picture localism_1.png, The localism calibration window %}

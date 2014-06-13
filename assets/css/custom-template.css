@@ -66,11 +66,11 @@ ul.nav-network {
 	margin-top:20px;
 }
 
-div.projects div:first-of-type {
+.projects div:first-of-type {
 	height: 200px;
 }
 
-div.panel-body {
+.panel-body {
     padding:0;
 }
 
@@ -95,7 +95,7 @@ div.panel-body {
 }
 
 /* Project page presentation */
-div.project p.description {
+.project p.description {
     font-style: italic;
 }
 .thumbnail.with-caption {
@@ -117,10 +117,18 @@ div.project p.description {
     color: #999;
 }
 
-div.thumbnail, .vimeo-iframe, .youtube-iframe, .soundcloud-iframe {
-	width:  90%;
+div.picture, .vimeo-iframe, .youtube-iframe, .soundcloud-iframe {
+	width:  80%;
 	max-width: 800px;
 	margin: 10px;
+	margin-left: 10%;
+	margin-right: auto;
+}
+
+.picture .caption {
+	position: relative;
+	bottom: 0;
+	text-align: center;
 }
 
 /* Lightbox - personal impelementation */

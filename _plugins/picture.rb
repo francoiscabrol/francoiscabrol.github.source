@@ -5,15 +5,14 @@ module Jekyll
 
     def initialize(name, id, tokens)
         super
-        @url  = id
-        @id = SecureRandom.urlsafe_base64(5)
-        if $3.nil? then
-            @width = 300
-            @height = 200
-            else
-            @width = $3.to_i
-            @height = $4.to_i
-        end
+	@param = split_params (id)
+        @url  = @param[0]
+	# @id = SecureRandom.urlsafe_base64(5)
+	if @param[1].nil? then
+	    @caption = " "
+	    else
+	    @caption = @param[1]
+	end
     end
 
     def lookup(context, name)
@@ -22,10 +21,15 @@ module Jekyll
         lookup
     end
 
+    def split_params(params)
+  	params.split(",").map(&:strip)
+    end
+
     def render(context)
         page_url = "#{lookup(context, 'site.url')}/assets/images/#{@url}"
-        %(<div class=\"thumbnail col-xs-6 col-md-4\">
+        %(<div class=\"thumbnail picture\">
             <img class=\"img-rounded\"  src=\"#{page_url}\" />
+	    <div class=\"caption\">#{@caption}</div>
         </div>)
     end
     Liquid::Template.register_tag "picture", self
