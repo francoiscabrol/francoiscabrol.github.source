@@ -7,16 +7,13 @@ repository: https://github.com/francoiscabrol/libjamu
 tags: [open, music, java]
 --- 
 
+## What's LibJaMu?
+
 The idea to create LibJamu is from my master thesis and the conception of the prototype [GenSession: A Flexible Zoomable Interface for Melody Generation]({% post_url 2014-02-24-gensession %}).
 After this work, I decided to create this library to support the development of a new melody generator called [MURAL]({% post_url 2014-03-09-mural %}).
 
 The next step will be to write the javadoc. I think this library could be very powerful to write music tool needed music theory algorithm.
 
 All of this is work in progress.
-
-**There is two modules**
-
-  * `midi:com.cabrol.francois.libjamu.midi` - Midi library with a simple midi player
-  * `musictheory:com.cabrol.francois.libjamu.musictheory` - Music theory library
 
 
