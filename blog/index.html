@@ -1,0 +1,16 @@
+---
+layout: default
+title: Blog
+---
+
+<h2> The {{site.name}}'s Blog </h2>
+
+{% for post in site.posts %}
+{% if post.categories contains 'blog' %}
+  <div>
+	<span class="post_date">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+</div>
+<div class="post_summary">{{ post.excerpt }}</div>
+{% endif %}
+{% endfor %}
+
