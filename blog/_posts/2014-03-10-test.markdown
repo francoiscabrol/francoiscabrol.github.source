@@ -1,9 +1,7 @@
 ---
 layout: post
 title:  First article
-subtitle: A test
-description: simple test the test is simple
-tags: [prout]
+tags: [prout, css3]
 --- 
 
 A test is very cool

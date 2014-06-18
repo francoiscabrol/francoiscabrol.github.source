@@ -1,8 +1,15 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+  <header class="entry-header">
+    <h2 class="entry-title">{{ page.title }}</h2>
+    <p class="entry-meta">
+      Posté le <a class="entry-date" href="date.html">{{ page.date | date_to_string }}</a> | Par <a class="entry-author" href="/contact/">{{site.author}}</a> | Tags
+    {% for tag in page.tags %}
+		<a class="label label-danger" href="tag.html">{{ tag }}</a>
+	{% endfor %}
+    </p>
+  </header>
 
 <div class="post">
 {{ content }}
