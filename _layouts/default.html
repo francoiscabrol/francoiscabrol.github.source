@@ -42,7 +42,7 @@
               </ul>
             </li>
             {% for p in site.pages %}
-              {% unless p.title == "Home" or p.title == "Contact" %}
+              {% unless p.title == "Home" or p.title == "About" %}
               <li {% if p.url == page.url %}class="active"{% endif %}>
                 <a href="{{ p.url }}">{{ p.title }}</a>
               </li>
@@ -83,7 +83,7 @@
     </div>
     <div id="footer">
       <div class="container">
-          © Copyright <a href="/contact/">François Cabrol</a> |
+          © Copyright <a href="/about/">François Cabrol</a> |
           <a href="https://github.com/francoiscabrol">github.com/francoiscabrol</a> -
           <a href="https://twitter.com/francoiscabrol">twitter.com/francoiscabrol</a><br />
           This web site is powered by <a href="http://jekyllrb.com">Jekyll</a, <a href="http://getbootstrap.com"> Bootstrap </a> and <a href="http://pages.github.com"> GitHub Pages </a>.

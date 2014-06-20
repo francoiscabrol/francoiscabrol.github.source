@@ -4,11 +4,11 @@ title:  Start with Sublime
 tags: [sublime]
 ---
 
-I use Sublime since few months to do some web development and I'd like to share useful tips from my little experience.
+I use Sublime Text since few months ago to do some web development and I'd like to share useful tips from my little experience.
 
 ## List of plugins
 
-If you want to be confortable with Sublime, you have to learn the most useful shortcuts and to understand how to install plugins. To do this, there is already a lot of ressources on the web as [this unofficial documentation](http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/keyboard_shortcuts_osx.html) that is very complete.
+If you want to be confortable with Sublime, you have to learn quickly the most useful shortcuts and then understand how to install plugins. To do this, there is already a lot of ressources on the web as [this unofficial documentation](http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/keyboard_shortcuts_osx.html) that is very complete.
 
 The list of plug-ins I use:
 
