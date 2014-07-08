@@ -2,7 +2,7 @@
 layout: post
 title:  Start with Sublime
 tags: [sublime]
----
+--- 
 
 I use Sublime Text since few months ago to do some web development and I'd like to share useful tips from my little experience.
 
