@@ -27,8 +27,7 @@ getParam = function(param) {
 
 filterPostsByPropertyValue = function(posts, categories, tag) {
   var filteredPosts = [];
-  console.log("posts", posts);
-  for (var i in posts) {
+  for (i=0; i<posts.length; i++) {
     var post = posts[i-1];
     if (post == null)
       continue;
@@ -51,8 +50,6 @@ layoutResultsPage = function(posts) {
   // Loop through each post to format it
   results = $('.results');
 
-  console.log("pssts", posts);
-
   for (i=0; i<posts.length; i++) {
     // Create an unordered list of the post's tags
     var tagsList = '';
@@ -63,23 +60,20 @@ layoutResultsPage = function(posts) {
 
     for (j=0; j<tags.length;j++) {
       if (tags[j]==null) continue;
-      tagsList += '' + '<a class="label label-danger" href="/search.html?tags=' + tags[j] + '">' + tags[j] + '</a>' + '</li>';
+     tagsList += '' + '<a class="label label-danger" href="/search/?tag=' + tags[j] + '&categories=' + post.category + '">' + tags[j] + '</a>' + '</li>';
     }
     tagsList += '';
 
     results.append(
-      '<section class="post">' +
+      '<section class="post">'
         // Page anchor
-        '<header class="entry-header">' +
-          '<h3 class="entry-title">' +
-            '<a href="' + post.href + '">' + post.title + '</a>' +
-          '</h3>' +
+        + '<header class="entry-header">'
+        + '<h3 class="entry-title">' + '<a href="' + post.href + '">' + post.title + '</a>' + '</h3>'
           // Post date
-          '<p class="entry-meta">' +
-              // Tags
-              tagsList +
-          '</p>' +
-        '</header>' +
+          + '<p class="entry-meta">'
+          // Tags
+          + tagsList + '</p>'
+        + '</header>' +
         post.description +
       '</section>'
     );
@@ -105,7 +99,7 @@ $.getJSON('/search/search.json', function(data) {
   console.log(data);
   posts = filterPostsByPropertyValue(data, params.categories, params.tag);
   updateHeader(params.categories, params.tag);
-  if (posts.length === 0) {
+ if (posts.length === 0) {
     // Display 'no results found' or similar here
     noResultsPage();
   } else {

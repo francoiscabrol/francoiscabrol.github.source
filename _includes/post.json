@@ -2,7 +2,7 @@
   "title"    : "{{ post.title }}",
   "category" : "{{ post.categories }}",
   "tags"     : [{% for tag in post.tags %}"{{ tag }}",{% endfor %} null],
-  "description":"{{ post.description }}",
+  "description": "{{ post.description }}",
   "href"     : "{{ post.url }}",
   "date"     : {
     "day"   : "{{ post.date | date: "%d" }}",
