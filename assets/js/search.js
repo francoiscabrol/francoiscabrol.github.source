@@ -42,7 +42,6 @@ filterPostsByPropertyValue = function(posts, categories, tag) {
       }
     }
   }
- console.log("return", filteredPosts);
 return filteredPosts;
 };
 
@@ -64,7 +63,7 @@ layoutResultsPage = function(posts) {
     }
     tagsList += '';
 
-    results.append(
+   results.append(
       '<section class="post">'
         // Page anchor
         + '<header class="entry-header">'
@@ -75,7 +74,7 @@ layoutResultsPage = function(posts) {
           + tagsList + '</p>'
         + '</header>' +
         post.description +
-      '</section>'
+     '</section>'
     );
   }
 };
@@ -100,7 +99,7 @@ $.getJSON('/search/search.json', function(data) {
   posts = filterPostsByPropertyValue(data, params.categories, params.tag);
   updateHeader(params.categories, params.tag);
  if (posts.length === 0) {
-    // Display 'no results found' or similar here
+   // Display 'no results found' or similar here
     noResultsPage();
   } else {
     layoutResultsPage(posts);
