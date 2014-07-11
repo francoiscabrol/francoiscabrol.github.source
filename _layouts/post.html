@@ -7,7 +7,7 @@ layout: default
     <p class="entry-meta">
     Posté le <a class="entry-date" href="date.html">{{ page.date | date_to_string }}</a> | Par <a class="entry-author" href="/about/">{{site.author}}</a> | Tags
     {% for tag in page.tags %}
-    <a class="label label-danger" href="">{{ tag }}</a>
+    <a class="label label-danger" href="{{ site.url }}/search/?tag={{tag}}&categories=blog">{{ tag }}</a>
     {% endfor %}
     </p>
   </header>

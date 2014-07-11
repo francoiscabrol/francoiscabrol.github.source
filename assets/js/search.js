@@ -59,7 +59,7 @@ layoutResultsPage = function(posts) {
 
     for (j=0; j<tags.length;j++) {
       if (tags[j]==null) continue;
-     tagsList += '' + '<a class="label label-danger" href="/search/?tag=' + tags[j] + '&categories=' + post.category + '">' + tags[j] + '</a>' + '</li>';
+     tagsList += '' + '<a class="label label-danger" href="/search/?tag=' + tags[j] + '&categories=' + post.category + '">' + tags[j] + '</a>' + '</li> ';
     }
     tagsList += '';
 
@@ -72,10 +72,9 @@ layoutResultsPage = function(posts) {
           + '<p class="entry-meta">'
           // Tags
           + tagsList + '</p>'
-        + '</header>' +
-        post.description +
-     '</section>'
-    );
+        + '</header>');
+	   results.append(post.description);
+     result.append('</section>');
   }
 };
 
@@ -105,4 +104,3 @@ $.getJSON('/search/search.json', function(data) {
     layoutResultsPage(posts);
   }
 });
-

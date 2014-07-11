@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  Build a JavaFX8 app with sbt
+description: JavaFx8 is a graphic library that come with java8. How to configure sbt to build a JavaFx8 application.
 tags: [javafx, java, sbt]
---- 
+---
 
 [Sbt is a simple build tool](http://www.scala-sbt.org) from the scala community. It is a great tool to build java and scala project.
 
@@ -31,7 +32,7 @@ Example of build.sbt file for a simple Java8 and Javafx8 project:
 	libraryDependencies ++= Seq(
 	   "com.novocode" % "junit-interface" % "0.10" % "test"
 	)
-	
+
 
 
 Note that the same following line should be needed in any ScalaFx8 project:
@@ -39,4 +40,4 @@ Note that the same following line should be needed in any ScalaFx8 project:
 	//Add Javafx8 library
 	unmanagedJars in Compile += Attributed.blank(file(System.getenv("JAVA_HOME") + "/jre/lib/ext/jfxrt.jar"))
 
-Hope this will be useful!		
+Hope this will be useful!

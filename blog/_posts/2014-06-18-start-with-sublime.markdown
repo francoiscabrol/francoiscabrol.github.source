@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  Start with Sublime
-tags: [sublime]
---- 
+description: Sublime is a text editor for developers. See the list of plugins that I use.
+tags: [sublime, editor]
+---
 
 I use Sublime Text since few months ago to do some web development and I'd like to share useful tips from my little experience.
 
@@ -28,7 +29,6 @@ If you need, you can add in the file preferences.sublime-settings these lines:
 
        "draw_white_space": "all", // Show tabulations
         "trim_trailing_white_space_on_save": true, // Delete white space on saving
-      
+
        "ignored_packages": [ ], // allows to use Vim command lines
         "vintage_start_in_command_mode": true // start sublime in the Vim command mode
-
