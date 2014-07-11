@@ -42,11 +42,11 @@
               </ul>
             </li>
             {% for p in site.pages %}
-              {% unless p.title == "Home" or p.title == "About" %}
+              {% if p.title == "Blog" %}
               <li {% if p.url == page.url %}class="active"{% endif %}>
                 <a href="{{ p.url }}">{{ p.title }}</a>
               </li>
-              {% endunless %}
+              {% endif %}
             {% endfor %}
           </ul>
           <ul class="nav-network">
