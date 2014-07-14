@@ -21,7 +21,7 @@ All of this is work in progress.
 
 This algorithm take a chord progression as text (like "C D- E" means Do major, Re minor and Mi major) and return the list of scales matching with these chords.
 
-    package francoiscabrol.libjamutest;
+    package com.cabrol.francois.libjamutest;
 
     import com.cabrol.francois.libjamu.musictheory.entity.scaleNote.Chord;
     import com.cabrol.francois.libjamu.musictheory.entity.scaleNote.ChordSuite;
@@ -54,11 +54,13 @@ This algorithm take a chord progression as text (like "C D- E" means Do major, R
 
 You will get this output:
 
-    For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de C major ( C D E F G A B )
-    For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de F major ( F G A A# C D E )
-    For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de D minor ( D E F G A A# C )
-    For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de A minor ( A B C D E F G )
-    For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de C mixolydien ( C D E F G A A# )
-    For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de G mixolydien ( G A B C D E F )
-    For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de A harmonic ( A B C D E F G# )
-    For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de E orient3 ( E F G# A A# C D )
+<pre><code class="no-highlight">
+For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de C major ( C D E F G A B )
+For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de F major ( F G A A# C D E )
+For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de D minor ( D E F G A A# C )
+For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de A minor ( A B C D E F G )
+For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de C mixolydien ( C D E F G A A# )
+For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de G mixolydien ( G A B C D E F )
+For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de A harmonic ( A B C D E F G# )
+For the ChordSuite{ A-(A-C-E-) D-7(D-F-A-C-) } you can improvise on Gamme de E orient3 ( E F G# A A# C D )
+</code></pre>
