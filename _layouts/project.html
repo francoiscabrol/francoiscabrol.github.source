@@ -13,7 +13,10 @@ layout: default
     {% if page.website or page.repository %}
     <ul class="list-inline">
         {% if page.website %}
-        <li><a href="{{page.website}}" class="btn btn-info btn-sm" role="button">{{page.title}} web page</a></li>
+        <li><a href="{{page.website}}" class="btn btn-sm btn-social btn-adn" role="button">
+          <i class="fa fa-link"></i>
+            {{page.title}} web page
+          </a></li>
         {% endif %}
         {% if page.website and page.repository %} | {% endif %}
         {% if page.repository %}
