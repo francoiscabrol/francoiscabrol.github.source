@@ -5,6 +5,7 @@
         <meta content="IE=edge,chrome=1">
         <title>{{site.name}} - {{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
+        {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
         <!-- Basic Bootstrap CSS -->
         <link href="/assets/css/bootstrap_journal.min.css" rel="stylesheet">
         <link href="/assets/css/bootstrap-social.css" rel="stylesheet">
