@@ -3,9 +3,11 @@ layout: project
 title: Harmony helper
 subtitle: A chord progression analyser
 description: Harmony helper is a little web app that allows to get all scales and modes that fit a chord progression  
-website: http://harmonyhelper.herokuapp.com
+websites:
+  - title: App on Heroku
+    url: http://harmonyhelper.herokuapp.com
 tags: [interface, music, generation, web, play, java]
---- 
+---
 
 {% picture harmony%20helper_1.png %}
 

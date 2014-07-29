@@ -10,15 +10,16 @@ layout: default
         {{page.description}}
     </p>
     {% endif %}
-    {% if page.website or page.repository %}
+    {% if page.websites or page.repository %}
     <ul class="list-inline">
-        {% if page.website %}
-        <li><a href="{{page.website}}" class="btn btn-sm btn-social btn-adn" role="button">
-          <i class="fa fa-link"></i>
-            {{page.title}} web page
-          </a></li>
+        {% if page.websites %}
+          {% for website in page.websites %}
+          <li><a href="{{website.url}}" class="btn btn-sm btn-social btn-adn" role="button">
+            <i class="fa fa-link"></i>
+              {{website.title}}
+            </a></li>
+          {% endfor %}
         {% endif %}
-        {% if page.website and page.repository %} | {% endif %}
         {% if page.repository %}
         <li><a href="{{page.repository}}" class="btn btn-sm btn-social btn-github"> <i class="fa fa-github"></i>{{page.title}} on GitHub</a></li>
         {% endif %}
