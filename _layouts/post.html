@@ -6,7 +6,7 @@ comments: true
 <header class="entry-header">
   <h1 class="entry-title">{{ page.title }}</h1>
   <p class="entry-meta">
-  Posté le <a class="entry-date" href="date.html">{{ page.date | date_to_string }}</a> | Par <a class="entry-author" href="/about/">{{site.author}}</a> | Tags
+  Posté le {{ page.date | date_to_string }} | Par <a class="entry-author" href="/about/">{{site.author}}</a> | Tags
   {% for tag in page.tags %}
   <a class="label label-danger" href="{{ site.url }}/search/?tag={{tag}}&categories=blog">{{ tag }}</a>
   {% endfor %}
@@ -32,5 +32,4 @@ comments: true
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    
 {% endif %}
