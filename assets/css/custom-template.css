@@ -163,3 +163,9 @@ div.lightbox .content {
 .lightbox .content img {
 	width: 50em;
 }
+
+/* Home page */
+
+.wordover {
+  fill: red;
+}

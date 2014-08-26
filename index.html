@@ -3,6 +3,90 @@ layout: default
 title: Home
 ---
 
-<div id="home">
-  
+<div id="cloud">
+prout
 </div>
+
+
+<script src="/assets/js/d3.js"></script>
+<script src="/assets/js/d3.layout.cloud.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+
+  $.getJSON('/search/search.json', function(data) {
+    var words = getAllWordsOccurences(data);
+    console.log("words", words);
+
+    render(words);
+  });
+
+  var getAllWordsOccurences = function(posts) {
+    var words_occur = {};
+    for (i=0; i<posts.length; i++) {
+      var post = posts[i-1];
+      if (post == null)
+        continue;
+      if (post["tags"] != undefined){
+        for (d=0; d<post["tags"].length; d++) {
+          words_occur[post["tags"][d]] = (words_occur[post["tags"][d]] == undefined) ? 1 : words_occur[post["tags"][d]] + 1;
+        }
+      }
+      words_occur[post["category"]] = (words_occur[post["category"]] == undefined) ? 1 : words_occur[post["category"]] + 1;
+    }
+
+    var format = [];
+
+    for(var word in words_occur) {
+        var occur = words_occur[word];
+        if (word == "null")
+          continue;
+        format.push({
+          text: word,
+          size: occur * 10
+        });
+    }
+    return format;
+  }
+
+  var render = function(tags) {
+    oldColor = undefined;
+
+    var fill = d3.scale.category20();
+
+    d3.layout.cloud().size([600, 600])
+        .words(tags)
+        .padding(5)
+        .rotate(function() { return ~~(Math.random() * 1.5) * 90; })
+        .font("Impact")
+        .fontSize(function(d) { return d.size; })
+        .on("end", draw)
+        .start();
+
+    function draw(words) {
+      d3.select("#cloud").append("svg")
+          .attr("width", 600)
+          .attr("height", 600)
+        .append("g")
+          .attr("transform", "translate(300,300)")
+        .selectAll("text")
+          .data(words)
+        .enter().append("text")
+          .style("font-size", function(d) { return d.size + "px"; })
+          .style("font-family", "Impact")
+          .style("fill", function(d, i) { return fill(i); })
+          .attr("text-anchor", "middle")
+          .attr("transform", function(d) {
+            return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+          })
+          .text(function(d) { return d.text; })
+          .on("mouseover", function(data){
+            $(this).attr("class", "wordover");
+            console.log(this);
+          })
+          .on("mouseout", function(data){
+            $(this).attr("class", "");
+          });
+    }
+  }
+
+</script>

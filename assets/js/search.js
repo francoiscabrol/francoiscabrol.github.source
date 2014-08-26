@@ -92,9 +92,8 @@ var params = {
   'categories' : getParam('categories'),
   'tag'        : getParam('tag')
 };
-console.log(params);
+
 $.getJSON('/search/search.json', function(data) {
-  console.log(data);
   posts = filterPostsByPropertyValue(data, params.categories, params.tag);
   updateHeader(params.categories, params.tag);
  if (posts.length === 0) {
