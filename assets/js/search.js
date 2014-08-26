@@ -15,7 +15,7 @@ Array.prototype.contains = function (v) {
 getParam = function(param) {
   var queryString = window.location.search.substring(1);
   var queries = queryString.split('&');
-  for (var i in queries) {
+  for (var i=0; i<queries.length; i++) {
     var pair = queries[i].split('=');
     if (pair[0] === param) {
       // Decode the parameter value, replacing %20 with a space etc.
@@ -40,6 +40,10 @@ filterPostsByPropertyValue = function(posts, categories, tag) {
       if (post_tags.contains(tag)){
         filteredPosts.push(post);
       }
+    } else if (categories == undefined){
+      if (post_tags.contains(tag) || post_categories == tag){
+        filteredPosts.push(post);
+      }
     }
   }
 return filteredPosts;
@@ -48,18 +52,16 @@ return filteredPosts;
 layoutResultsPage = function(posts) {
   // Loop through each post to format it
   results = $('.results');
-
-  for (i=0; i<posts.length; i++) {
+  for (var i=0; i<posts.length; i++) {
     // Create an unordered list of the post's tags
     var tagsList = '';
     var post     = posts[i];
-    console.log(post);
     if (post == null) continue;
     var tags = post.tags;
 
     for (j=0; j<tags.length;j++) {
       if (tags[j]==null) continue;
-     tagsList += '' + '<a class="label label-danger" href="/search/?tag=' + tags[j] + '&categories=' + post.category + '">' + tags[j] + '</a>' + '</li> ';
+      tagsList += '' + '<a class="label label-danger" href="/search/?tag=' + tags[j] + '&categories=' + post.category + '">' + tags[j] + '</a>' + '</li> ';
     }
     tagsList += '';
 
@@ -74,12 +76,17 @@ layoutResultsPage = function(posts) {
           + tagsList + '</p>'
         + '</header>');
 	   results.append(post.description);
-     result.append('</section>');
+     results.append('</section>');
   }
 };
 
 updateHeader = function (categories, tag){
-  $('h1').html('Search for "' + tag + '" in ' + categories );
+  var s = 'Results for "' + tag;
+  if (categories != null)
+    s += '" in ' + categories;
+  else
+    s += '"';
+  $('h1').html(s);
 };
 
 noResultsPage = function () {

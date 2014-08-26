@@ -167,5 +167,6 @@ div.lightbox .content {
 /* Home page */
 
 .wordover {
-  fill: red;
+  cursor: pointer;
+  fill: red !important;
 }
