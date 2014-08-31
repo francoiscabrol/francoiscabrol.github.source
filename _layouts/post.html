@@ -5,16 +5,26 @@ comments: true
 
 <header class="entry-header">
   <h1 class="entry-title">{{ page.title }}</h1>
-  <p class="entry-meta">
-  Posté le {{ page.date | date_to_string }} | Par <a class="entry-author" href="/about/">{{site.author}}</a> | Tags
-  {% for tag in page.tags %}
-  <a class="label label-danger" href="{{ site.url }}/search/?tag={{tag}}&categories=blog">{{ tag }}</a>
-  {% endfor %}
+  <p>
+        <!-- Date/Time -->
+        <span class="glyphicon glyphicon-time"></span> Posted on {{ page.date | date_to_string }}
   </p>
+  <div class="bs-callout">
+      {% for tag in page.tags %}
+      <a class="label label-primary" href="{{ site.url }}/search/?tag={{tag}}&categories=blog">{{ tag }}</a>
+      {% endfor %}
+  </div>
+
+  <hr>
+
+  <p class="lead"> {{ page.description }} </p>
+
+  <hr>
 </header>
 
 <div class="post">
 {{ content }}
+<!-- by <a class="entry-author" href="/about/">{{site.author}}</a> -->
 </div>
 
 {% if page.comments %}

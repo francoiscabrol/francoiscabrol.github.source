@@ -7,7 +7,7 @@ websites:
   - title: App on Heroku
     url: http://harmonyhelper.herokuapp.com
 tags: [interface, music, generation, web, play, java]
----
+--- 
 
 {% picture harmony%20helper_1.png %}
 
