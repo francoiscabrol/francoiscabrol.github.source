@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Build a JavaFX8 app with sbt
-description: JavaFx8 is a graphic library that come with java8. How to configure sbt to build a JavaFx8 application.
+title:  Build a JavaFX 8 app with sbt
+description: JavaFx 8 is a graphic library that come with java8. How to configure sbt to build a JavaFx 8 application.
 tags: [javafx, java, sbt]
----
+--- 
 
 [Sbt is a simple build tool](http://www.scala-sbt.org) from the scala community. It is a great tool to build java and scala project.
 
