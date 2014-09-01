@@ -39,7 +39,29 @@
               </li>
               {% endif %}
             {% endfor %}
+                      </ul>
+          {% if page.categories contains 'blog' %}
+          <ul class="nav-network">
+            <li>
+              <a href="/blog/">
+                <button type="button" class="btn btn-primary btn-sm">
+                    <span class="glyphicon glyphicon-th-list"></span> Back to posts list
+                </button>
+              </a>
+            </li>
           </ul>
+          {% endif %}
+          {% if page.categories contains 'project' %}
+          <ul class="nav-network">
+            <li>
+              <a href="/project/">
+                <button type="button" class="btn btn-primary btn-sm">
+                    <span class="glyphicon glyphicon-th-list"></span> Back to projects list
+                </button>
+              </a>
+            </li>
+          </ul>
+          {% endif %}
           <ul class="nav-network">
             <li>
 	    <a class="btn btn-sm btn-social-icon btn-google-plus" href="mailto:{{site.mail}}" data-toggle="tooltip" data-placement="bottom" title="{{site.mail}}">

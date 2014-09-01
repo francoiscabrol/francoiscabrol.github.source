@@ -27,6 +27,19 @@ comments: true
 <!-- by <a class="entry-author" href="/about/">{{site.author}}</a> -->
 </div>
 
+<ul class="pager">
+    <li class="previous">
+      {% if page.next_in_category.url %}
+        <a href="{{page.next_in_category.url}}">Previous post</a>
+      {% endif %}
+    </li>
+    <li class="next">
+      {% if page.previous_in_category.url %}
+        <a href="{{page.previous_in_category.url}}">Next post</a>
+      {% endif %}
+    </li>
+</ul>
+
 {% if page.comments %}
  <div id="disqus_thread"></div>
     <script type="text/javascript">

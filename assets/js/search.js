@@ -69,7 +69,7 @@ layoutResultsPage = function(posts) {
       '<section class="post">'
         // Page anchor
         + '<header class="entry-header">'
-        + '<h3 class="entry-title">' + '<a href="' + post.href + '">' + post.title + '</a>' + '</h3>'
+        + '<h3 class="entry-title">' + '<a href="' + post.href + '">' + post.title + '</a> (' + post.category + ')</h3>'
           // Post date
           + '<p class="entry-meta">'
           // Tags
@@ -81,7 +81,7 @@ layoutResultsPage = function(posts) {
 };
 
 updateHeader = function (categories, tag){
-  var s = 'Results for "' + tag;
+  var s = 'Related to "' + tag;
   if (categories != null)
     s += '" in ' + categories;
   else
