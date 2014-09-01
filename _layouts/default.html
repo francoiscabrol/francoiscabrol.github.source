@@ -32,7 +32,8 @@
             {% assign sorted_pages = site.pages | sort:"name" %}
             {% for p in sorted_pages %}
               {% if p.title == "Blog" or p.title == 'Projects' or p.title == 'About' %}
-              <li {% if p.url == page.url %}class="active"{% endif %}>
+              {% assign lower_title = p.title | downcase %}
+              <li {% if p.url == page.url or page.categories contains lower_title %}class="active"{% endif %}>
                 <a href="{{ p.url }}">{{ p.title }}</a>
               </li>
               {% endif %}

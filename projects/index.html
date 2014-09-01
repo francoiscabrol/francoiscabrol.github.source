@@ -10,7 +10,7 @@ title: Projects
   <h2>Visualization & user interfaces</h2>
       <div class="row">
       {% for post in site.posts %}
-        {% if post.categories contains 'project' and post.tags contains 'interface' %}
+        {% if post.categories contains 'projects' and post.tags contains 'interface' %}
           <div class="text-center col-sm-4">
                 <img class="img-circle" data-src="holder.js/200x200" class="img-thumbnail" alt="100x100" src="{{ site.url }}/assets/images/{{ post.title | downcase }}_1.png" style="width: 150px; height: 150px;">
               <h4>{{ post.title }}</h4>
@@ -27,7 +27,7 @@ title: Projects
               <table class="table table-striped table-hover ">
                   <tbody>
                   {% for post in site.posts %}
-                  {% if post.categories contains 'project' and post.tags contains 'open' %}
+                  {% if post.categories contains 'projects' and post.tags contains 'open' %}
                   <tr>
                       <td width="10%">{{ post.title }}</td>
                       <td width="70%">{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt }}{% endif %}</td>
