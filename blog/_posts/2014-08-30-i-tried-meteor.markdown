@@ -11,7 +11,7 @@ So Meteor is based on Node.js. If you don't know what Node.js is, you have to un
 
 > If there is changes from any client, data changements are immediately send to everyone’s.
 
-What means reactivity? That's means if there is changes from any client, data changements are immediately send to everyone's.
+What means reactivity? That's means if there is changes from any client, data changements are immediately send to everyone's. You could read also the [reactive manifesto](http://www.reactivemanifesto.org) for a precice definition.
 
 > Atmospherejs packages provide code for the client-side or the server-side as well as for both
 
@@ -19,13 +19,13 @@ Since the v0.9 of meteor you can use any **atmospherejs** packages without meteo
 
 > A good occassion to discovered no sql databases (if you don't know)
 
-For instance, you have to use mongodb with meteor. There is no other choice. This will change maybe but for now that is the biggest restriction. And the reason is that meteor provide an higher level api for using the mongodb api on the server-side... and on the client-side as well! This implementation allows to preserve the reactivity without much code to write. The client-side api is minimongo and I invite you to learn more about this that contribute to make meteor so powerful. 
+For instance, you have to use mongodb with meteor. There is no other choice. This will change maybe but for now that is the biggest restriction. And the reason is that meteor provide an higher level api for using the mongodb api on the server-side... and on the client-side as well! This implementation allows to preserve the reactivity without much code to write. The client-side api is minimongo and I invite you to learn more about what contribute to make meteor so powerful. 
 
 > Yes, Meteor is secure (well, if you do what needed)
 
 When I started to learn meteor, persons said me 'Be carreful! meteor is not secure!'. Ok, don't listen this rumor, it is wrong.
 
-The principal reason for why this rumor exists is well explain on this article 
+The principal reason for why this rumor exists is well explain on [this article](https://www.discovermeteor.com/blog/meteor-and-security/). 
 
 > Try it yourself!
 
