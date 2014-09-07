@@ -8,3 +8,5 @@ lsi: false
 pygments: true
 permalink: none
 exclude: [README.md, Rakefile]
+gems:
+  - jekyll-sitemap
