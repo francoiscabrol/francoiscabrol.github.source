@@ -5,8 +5,6 @@ title: About
 
 # About
 
-
-
 ----------------------
 
 <a href="mailto:{{site.mail}}">{{site.mail}}</a>
@@ -27,5 +25,3 @@ title: About
   <i class="fa fa-soundcloud"></i>
  	Soundcloud
 </a>
-
-

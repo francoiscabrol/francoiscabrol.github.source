@@ -177,3 +177,9 @@ pre {
 	background-color: #272822;
 	color: white;
 }
+
+/* header custom title */
+.navbar-brand:hover, .navbar-nav a:hover {
+  color: #303030 !important;
+  background-color: #F6F5F5 !important;
+}
