@@ -1,9 +1,10 @@
 ---
 layout: default
 title: About
+description: François Cabrol's contact page.
 ---
 
-# About
+# Contact
 
 ----------------------
 
