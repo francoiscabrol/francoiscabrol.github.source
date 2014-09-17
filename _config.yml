@@ -5,7 +5,7 @@ mail: francois.cabrol@live.ca
 markdown: kramdown
 safe: false
 lsi: false
-pygments: true
+highlighter: pygments
 permalink: none
 exclude: [README.md, Rakefile]
 gems:
