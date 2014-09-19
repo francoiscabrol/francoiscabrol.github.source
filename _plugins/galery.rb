@@ -1,5 +1,5 @@
 module Jekyll
-  class Picture < Liquid::Tag
+  class Galery < Liquid::Tag
 
     require 'securerandom'
 

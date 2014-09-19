@@ -6,9 +6,9 @@ date:   2014-03-09 12:01:56
 description: A java library for leap motion calibration
 repository: https://github.com/francoiscabrol/localism
 tags: [open, leap, java]
---- 
+---
 
-### Why Localism? 
+### Why Localism?
 A mouse replacement system using leap motion and based on a screen calibration tool.
 The first idea was to create a mouse replacement system based on an home-made screen calibration system.
 Now, I'd like to get localism work better and transform it in a simple screen calibration library for the leap Motion.
@@ -21,6 +21,6 @@ Please visit the [github repository](https://github.com/francoiscabrol/localism)
 
 ### Screenshot
 
-{% picture localism_3.png, The mouse replacement example of Localism. Calibrate the screen and press mouse on/off. %}
-{% picture localism_2.png, The localism calibration window. The user have to place the finger on the black square and press ALT. %}
-{% picture localism_1.png, The localism calibration window %}
+{% picture localism_3.png, A mouse replacement as example of Localism. Calibrate the screen and press mouse on/off. %}
+{% picture localism_2.png, The localism calibration window. The user has to place the finger on the black square and press the key ALT. %}
+{% picture localism_1.png, The localism calibration window when the calibration is done. %}
