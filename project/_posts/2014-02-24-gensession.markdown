@@ -9,7 +9,7 @@ websites:
   - title: Gensession Web page
     url: http://hifiv.ca/~francoiscabrol/GenSession/
 tags: [visu, interface, music, generation, java]
----
+--- 
 
 ## What's GenSession?
 
