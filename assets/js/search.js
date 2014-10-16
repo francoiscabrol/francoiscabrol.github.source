@@ -25,7 +25,7 @@ getParam = function(param) {
   return null;
 };
 
-filterPostsByPropertyValue = function(posts, categories, tag) {
+searchPostsByProperty = function(posts, categories, tag) {
   var filteredPosts = [];
   for (i=0; i<posts.length; i++) {
     var post = posts[i-1];
@@ -101,7 +101,7 @@ var params = {
 };
 
 $.getJSON('/search/search.json', function(data) {
-  posts = filterPostsByPropertyValue(data, params.categories, params.tag);
+  posts = searchPostsByProperty(data, params.categories, params.tag);
   updateHeader(params.categories, params.tag);
  if (posts.length === 0) {
    // Display 'no results found' or similar here
@@ -110,3 +110,39 @@ $.getJSON('/search/search.json', function(data) {
     layoutResultsPage(posts);
   }
 });
+
+/**
+* @param params = { 'categories'=, 'tag'= }
+* @param callback if a function with one argument: the filtered posts
+*/
+function searchByProperty(params, callback){
+
+    var tag        = params.tag;
+    var categories = params.categories;
+
+    $.getJSON('/search/search.json', function(data) {
+        var filteredPosts = [];
+        for (i=0; i<posts.length; i++) {
+            var post = posts[i-1];
+            if (post == null)
+                continue;
+            var post_tags = post["tags"];
+            var post_categories = post["category"];
+
+            // The property could be a string, such as a post's category,
+            // or an array, such as a post's tags
+            if (post_categories === Array && post_categories.contains(categories) || categories === Array && categories.contains(post_categories) || categories == post_categories){
+                if (post_tags.contains(tag)){
+                    filteredPosts.push(post);
+                }
+            }
+            else if (categories == undefined){
+                if (post_tags.contains(tag) || post_categories == tag){
+                    filteredPosts.push(post);
+                }
+            }
+            callback && callback(filteredPosts);
+        }
+    });
+
+};
