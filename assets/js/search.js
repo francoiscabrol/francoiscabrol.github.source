@@ -12,105 +12,6 @@ Array.prototype.contains = function (v) {
     }
 };
 
-getParam = function(param) {
-  var queryString = window.location.search.substring(1);
-  var queries = queryString.split('&');
-  for (var i=0; i<queries.length; i++) {
-    var pair = queries[i].split('=');
-    if (pair[0] === param) {
-      // Decode the parameter value, replacing %20 with a space etc.
-      return decodeURI(pair[1]);
-    }
-  }
-  return null;
-};
-
-searchPostsByProperty = function(posts, categories, tag) {
-  var filteredPosts = [];
-  for (i=0; i<posts.length; i++) {
-    var post = posts[i-1];
-    if (post == null)
-      continue;
-    var post_tags = post["tags"];
-    var post_categories = post["category"];
-
-    // The property could be a string, such as a post's category,
-    // or an array, such as a post's tags
-    if (post_categories === Array && post_categories.contains(categories) || categories === Array && categories.contains(post_categories) || categories == post_categories){
-      if (post_tags.contains(tag)){
-        filteredPosts.push(post);
-      }
-    } else if (categories == undefined){
-      if (post_tags.contains(tag) || post_categories == tag){
-        filteredPosts.push(post);
-      }
-    }
-  }
-return filteredPosts;
-};
-
-layoutResultsPage = function(posts) {
-  // Loop through each post to format it
-  results = $('.results');
-  for (var i=0; i<posts.length; i++) {
-    // Create an unordered list of the post's tags
-    var tagsList = '';
-    var post     = posts[i];
-    if (post == null) continue;
-    var tags = post.tags;
-
-    for (j=0; j<tags.length;j++) {
-      if (tags[j]==null) continue;
-      tagsList += '' + '<a class="label label-danger" href="/search/?tag=' + tags[j] + '&categories=' + post.category + '">' + tags[j] + '</a>' + '</li> ';
-    }
-    tagsList += '';
-
-   results.append(
-      '<section class="post">'
-        // Page anchor
-        + '<header class="entry-header">'
-        + '<h3 class="entry-title">' + '<a href="' + post.href + '">' + post.title + '</a> (' + post.category + ')</h3>'
-          // Post date
-          + '<p class="entry-meta">'
-          // Tags
-          + tagsList + '</p>'
-        + '</header>');
-	   results.append(post.description);
-     results.append('</section>');
-  }
-};
-
-updateHeader = function (categories, tag){
-  var s = 'Related to "' + tag;
-  if (categories != null)
-    s += '" in ' + categories;
-  else
-    s += '"';
-  $('h1').html(s);
-};
-
-noResultsPage = function () {
-  results = $('ul.results');
-  results.append("No results");
-};
-
-
-var params = {
-  'categories' : getParam('categories'),
-  'tag'        : getParam('tag')
-};
-
-$.getJSON('/search/search.json', function(data) {
-  posts = searchPostsByProperty(data, params.categories, params.tag);
-  updateHeader(params.categories, params.tag);
- if (posts.length === 0) {
-   // Display 'no results found' or similar here
-    noResultsPage();
-  } else {
-    layoutResultsPage(posts);
-  }
-});
-
 /**
 * @param params = { 'categories'=, 'tag'= }
 * @param callback if a function with one argument: the filtered posts
@@ -121,6 +22,7 @@ function searchByProperty(params, callback){
     var categories = params.categories;
 
     $.getJSON('/search/search.json', function(data) {
+        var posts = data;
         var filteredPosts = [];
         for (i=0; i<posts.length; i++) {
             var post = posts[i-1];
@@ -141,8 +43,8 @@ function searchByProperty(params, callback){
                     filteredPosts.push(post);
                 }
             }
-            callback && callback(filteredPosts);
         }
+        callback && callback(filteredPosts);
     });
 
 };
