@@ -5,7 +5,7 @@ subtitle: A flexible zoomable interface for melody generation
 description: GenSession is a pioneer interface that propose an original way to interact with random music generator.
 websites:
   - title: Substance article
-    url: http://substance-en.etsmtl.ca/gensession-easy-use-tool-melody-generation/
+    url: https://substance.etsmtl.ca/en/gensession-easy-use-tool-melody-generation
   - title: Gensession Web page
     url: http://hifiv.ca/~francoiscabrol/GenSession/
 tags: [visu, interface, music, generation, java]
