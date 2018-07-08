@@ -24,6 +24,9 @@ end
 
 desc "Deploy _site/ to master branch"
 task :deploy do
+  puts "\n## Build"
+  status = system("jekyll build")
+  puts status ? "Success" : "Failed"
   puts "\n## Go to the _site folder"
   status = Dir.chdir("_site")
   puts status ? "Success" : "Failed"
