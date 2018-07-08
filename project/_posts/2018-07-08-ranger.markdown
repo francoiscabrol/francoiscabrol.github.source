@@ -1,0 +1,13 @@
+---
+layout: project
+title:  Ranger.vim
+subtitle: File explorer for vim and neovim
+date:   2014-03-09 12:01:56
+description: Ranger integration in vim/neovim as file explorer
+repository: https://github.com/francoiscabrol/ranger.vim
+tags: [vim, plugin, opensource, interface]
+---
+
+With an average of 300 cloners by months since more than 2 years, the number of new user increase every day and I estimate it close to 8000 in total! 
+
+{% picture ranger.vim_2.gif, Ranger is a very convenient file exlorer for vim. %}
