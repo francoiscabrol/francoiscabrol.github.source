@@ -2,30 +2,22 @@
 desc "Preview _site/"
 task :preview do
   puts "\n## Opening _site/ in browser"
-  status = system("/Applications/Chromium.app/Contents/MacOS/Chromium http://localhost:4000 &")
+  status = system("open http://localhost:4000 &")
   puts status ? "Success" : "Failed"
 end
 
 task :dev do
   puts "\n## Launch Jekyll serve --watch --draft"
-  cmd = 'osascript -e "tell application \"Terminal\"" \
-    -e "tell application \"System Events\" to keystroke \"t\" using {command down}" \
-    -e "do script \"Jekyll serve --drafts --watch\" in front window" \
-    -e "end tell"
-    > /dev/null'
-  status = system(cmd)  
-  puts status ? "Success" : "Failed"
+  cmd = 'Jekyll serve --drafts --watch'
+  status = system(cmd)
+  puts status
   Rake::Task["preview"].execute
 end
 
 task :prod do
   puts "\n## Launch Jekyll serve --watch"
-  cmd = 'osascript -e "tell application \"Terminal\"" \
-    -e "tell application \"System Events\" to keystroke \"t\" using {command down}" \
-    -e "do script \"Jekyll serve --watch\" in front window" \
-    -e "end tell"
-    > /dev/null'
-  status = system(cmd)  
+  cmd = 'Jekyll serve --watch'
+  status = system(cmd)
   puts status ? "Success" : "Failed"
   Rake::Task["preview"].execute
 end

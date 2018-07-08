@@ -16,4 +16,6 @@ The sources of my personnal website
 - gem install jekyll
 - gem install jekyll-sitemap
     
+### Run
     
+- run `rake dev`
