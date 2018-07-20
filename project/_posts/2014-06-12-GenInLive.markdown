@@ -12,7 +12,7 @@ GenInLive is a prototype that allow to generate melody on a pre-defined chord pr
 
 I was curious to test a similar application that is why I developed it. The result is pretty  good for a little prototype and I got satisfaction with it.
 
-That's user experience give me motivation to start the development of [MURAL]({% post_url 2014-03-09-mural %}).
+That's user experience give me motivation to start the development of [MURAL]({% post_url project/2014-03-09-mural %}).
 
 This prototype is developed with Java, the native library Java.Sound and the graphic library JavaFX.
 
