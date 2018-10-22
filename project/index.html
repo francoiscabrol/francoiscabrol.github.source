@@ -5,21 +5,20 @@ description: François Cabrol's projects about music generation, dataviz, or web
 ---
 
 <div id="home">
-  <div style="  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  <div style="display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   grid-gap: 30px;">
   {% for post in site.posts %}
     {% if post.categories contains 'project' %}
       <div class="text-center">
-      <a href="{{ post.url }}" class="card-link">
-        <div class="thumbnail">
+        <div class="thumbnail-card">
           <img data-src="holder.js/100%x200" alt="100%x200" src="{{ site.url }}/assets/images/{{ post.title | downcase }}_1.png" style="height: 200px; width: 100%; display: block;">
           <div class="caption">
             <h3>{{ post.title }}</h3>
             <p>{% if post.description %}{{ post.description }}{% else %}{{ post.subtitle }}{% endif %}</p>
+            <p><a href="{{ post.url }}" class="btn btn-sm btn-adn" role="button">learn more</a></p>
           </div>
         </div>
-        </a>
       </div>
     {% endif %}
   {% endfor %}

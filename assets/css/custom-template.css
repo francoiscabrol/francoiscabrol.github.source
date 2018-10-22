@@ -189,5 +189,17 @@ a.card-link:hover {
 }
 
 a.card-link:hover h3 {
-  color: #54acef !important;
+  /* color: #54acef !important; */
+}
+
+a.card-link:hover .thumbnail-card {
+	border-color: #54acef;
+}  
+
+.thumbnail-card {
+	border: 1px solid lightgrey;
+	border-radius: 1%;
+	overflow: hidden;
+	color: grey;
+	height: 100%;
 }

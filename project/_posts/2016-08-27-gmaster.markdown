@@ -1,0 +1,16 @@
+---
+layout: project
+title:  GitMaster
+subtitle: A tool for managing a set of git repositories
+date: 2016-10-09 12:01:56
+description: command line tool for managing a set of git repositories 
+repository: https://github.com/francoiscabrol/gitmaster
+tags: [git, scala, tool]
+---
+
+With GitMaster you can get in your terminal:
+- An overview of all your git repositories in any directory like your $HOME/WORKSPACE. For example by runing the command `gmaster status`.
+
+- The possibility to manage a set of git repositories within a third git "master repo". For example, you have a project with several services or subprojects, Each project is store in a different repository. You want to allows any developer to clone the master repository and then clone all repositories. Then you want to allow the developer to check or pull every repositories at the same time. This tool do that.
+
+{% picture gitmaster_1.png, Example of gmaster --group output. %}
